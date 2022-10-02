@@ -163,7 +163,7 @@ public class UserDAO extends DataAccessObject{
             if(rs.next()){
                 num = rs.getInt("count(*)");
             }else{
-                System.out.println("カウントが正しく取得できていません");
+                System.out.println("重複はありません");
             }
         }catch(SQLException e){
             e.getMessage();
