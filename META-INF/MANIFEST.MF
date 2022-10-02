@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: noukin_jyuku
+Bundle-SymbolicName: noukin_jyuku
+Bundle-Version: 1.0.0.qualifier
+Export-Package: Bean,
+ DAO,
+ Servlet,
+ Utils,
+ Validate,
+ filters
+Require-Bundle: javax.servlet
