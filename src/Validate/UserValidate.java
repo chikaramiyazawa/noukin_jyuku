@@ -20,18 +20,18 @@ public class UserValidate {
             list.add("ユーザーIDを入力してください。");
             insertBean.setMessage(list);
             System.out.println("ユーザーIDを入力してください。");
+            
+        }
+        
+        int dplicate  = userDAO.getCountByID(insertBean.getUser_ID());
 
-            UserBean dplicate  = userDAO.findById(insertBean.getUser_ID());
-
-            if(dplicate != null){
+            if(dplicate != 0){
 
                 list.add("入力されたユーザーIDはすでに使用されております。");
                 insertBean.setMessage(list);
                 System.out.println("入力されたユーザーIDはすでに使用されております。");
 
             }
-
-        }
 
         if(insertBean.getUser_NAME() == null){
 
